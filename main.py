@@ -1,17 +1,15 @@
 import cv2
 import numpy as np
-
+import sys
 import astarp
 
 from time import time
 from os.path import basename, join, splitext
 
 # maze file
-MAZE_FPATH =  'maze_small.png'
+MAZE_FPATH = sys.argv[1] 
 
-OUTP_FPATH = 'maze_small_soln.png'
-
-
+OUTP_FPATH = sys.argv[2]
 def main():
 
     maze = cv2.imread(MAZE_FPATH)
